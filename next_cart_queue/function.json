@@ -1,0 +1,22 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "ordersqueuetam",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "cosmosDocument",
+      "databaseName": "orders",
+      "collectionName": "mycontainer",
+      "createIfNotExists": false,
+      "connectionStringSetting": "CosmosDBconnectionString",
+      "partitionKey": "/id"
+    }
+  ],
+  "scriptFile": "../dist/next_cart_queue/index.js"
+}
