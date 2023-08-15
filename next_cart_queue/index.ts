@@ -1,7 +1,7 @@
 import { AzureFunction, Context } from "@azure/functions"
 
 const queueTrigger: AzureFunction = async function (context: Context, myQueueItem: string): Promise<void> {
-    context.log('Queue trigger function processed work item', myQueueItem);
+    context.log('Queue trigger function 1 processed work item', myQueueItem);
     if (myQueueItem) {
         //context.bindings.cosmosDocument = JSON.stringify({
             context.bindings.cosmosDocument = {
