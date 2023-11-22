@@ -9,7 +9,7 @@ const queueTrigger: AzureFunction = async function (context: Context, myQueueIte
             id: new Date().toISOString() + Math.random().toString().substring(2, 10),
             queue: {
                 other:myQueueItem,
-                myobj:3
+                myobj:4
             },
             try:1
         };
